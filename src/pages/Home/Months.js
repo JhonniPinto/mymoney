@@ -30,9 +30,9 @@ const Months = () => {
                                     return (
                                         <tr key={index}>
                                             <td><Link to={`/movimentacoes/${mes}`} title='Acessar mês'>{mes}</Link></td>
-                                            <td>{data.data[mes].previsao_entrada}</td>
+                                            <td>{data.data[mes].previsao_entrada ? data.data[mes].previsao_entrada : 0}</td>
                                             <td>{!data.data[mes].entradas ? '0' : data.data[mes].entradas}</td>
-                                            <td>{data.data[mes].previsao_saida}</td>
+                                            <td>{data.data[mes].previsao_saida ? data.data[mes].previsao_saida : 0}</td>
                                             <td>{!data.data[mes].saidas ? '0' : data.data[mes].saidas}</td>
                                         </tr>
                                     )

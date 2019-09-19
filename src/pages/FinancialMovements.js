@@ -52,7 +52,7 @@ const FinancialMovements = ({ match }) => {
                                 <td>Previsão de entrada (R$):</td>
                                 <td className='text-center'>
                                     {!change.inputForecast 
-                                        ? <button onClick={() => setChange({...change, inputForecast: true })} className='btn btn-info py-0' title='Alterar previsão de entrada'>{dataMonth.data ? dataMonth.data.previsao_entrada : 0}</button> 
+                                        ? <button onClick={() => setChange({...change, inputForecast: true })} className='btn btn-info py-0' title='Alterar previsão de entrada'>{dataMonth.data.previsao_entrada ? dataMonth.data.previsao_entrada : 0}</button> 
                                             : <input className='text-center' onBlur={setInputForecast} type='text' autoFocus />}
                                 </td>
                             </tr>
@@ -64,7 +64,7 @@ const FinancialMovements = ({ match }) => {
                                 <td>Previsão de saída (R$):</td>
                                 <td className='text-center'>
                                     {!change.exitForecast 
-                                        ? <button onClick={() => setChange({...change, exitForecast: true })} className='btn btn-info py-0' title='Alterar previsão de saída'>{dataMonth.data ? dataMonth.data.previsao_saida : 0}</button> 
+                                        ? <button onClick={() => setChange({...change, exitForecast: true })} className='btn btn-info py-0' title='Alterar previsão de saída'>{dataMonth.data.previsao_saida ? dataMonth.data.previsao_saida : 0}</button> 
                                             : <input className='text-center' onBlur={setExitForecast} type='text' autoFocus />}
                                 </td>
                             </tr>
